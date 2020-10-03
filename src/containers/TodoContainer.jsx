@@ -53,7 +53,7 @@ export class TodoContainer extends React.Component {
         this.updateStatus.bind(this)
     }
 
-    updateStatus = (id, newStatus) => {
+    updateStatus = (id) => {
         this.setState({
             todoData: this.state.todoData.map(todo => id === todo.id ? {
                 ...todo,
