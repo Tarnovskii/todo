@@ -3,6 +3,7 @@ import React from 'react'
 import s from '../stylesheets/creator.module.css'
 
 export const Creator = (props) => {
+    console.log(props);
     return (
         <div className={s.wrapper}>
             <input className={s.title}
@@ -36,7 +37,7 @@ export const Creator = (props) => {
                 props.formHandler({type: "CHANGE_DATE", value: e.target.value})
             }} type={'date'}/></p>
 
-            <button onClick={() => console.log(props.values)}> Создать </button>
+            <button onClick={props.confirm}> Создать </button>
         </div>
     )
 }

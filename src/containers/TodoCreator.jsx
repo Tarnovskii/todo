@@ -16,6 +16,21 @@ export class TodoCreator extends React.Component {
         }
 
         this.formHandler.bind(this);
+        this.submitNewTask.bind(this);
+    }
+
+    submitNewTask = () => {
+        this.props.updateTaskList(this.state.newTaskFields)
+        this.setState({
+            newTaskFields: {
+                id: 0,
+                title: "",
+                description: "",
+                status: "todo",
+                date: `${new Date().getFullYear()}-${new Date().getMonth() + 1}-0${new Date().getDate()}`,
+                buttonText: ""
+            }
+        });
     }
 
     formHandler = (action) => {
@@ -53,10 +68,11 @@ export class TodoCreator extends React.Component {
                 })
             default:
                 console.log(action);
+                break;
         }
     }
 
     render() {
-        return <Creator formHandler={this.formHandler} values={{...this.state.newTaskFields}}/>
+        return <Creator confirm={this.submitNewTask} formHandler={this.formHandler} values={{...this.state.newTaskFields}}/>
     }
 }
