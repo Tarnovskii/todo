@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {TodoContainer} from "./containers/TodoContainer";
 import {Route, Switch} from "react-router";
 import {TodoCreator} from "./containers/TodoCreator";
