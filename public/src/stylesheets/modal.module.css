@@ -1,35 +1,10 @@
-.modal_wrapper {
+.wrapper {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 999999;
-}
-
-.task_creator_wrapper {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  width: 400px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 15px;
-  padding: 30px 30px 20px;
-}
-.task_creator_wrapper label {
-  margin-bottom: 3px;
-}
-.task_creator_wrapper input {
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 20px;
-  height: 30px;
-  padding: 2px 5px;
-  border-radius: 5px;
+  height: 100vh;
+  width: 100vh;
+  background: black;
 }
 
 /*# sourceMappingURL=modal.module.css.map */
