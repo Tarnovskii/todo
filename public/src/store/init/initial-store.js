@@ -6,5 +6,9 @@ export const initialState = {
     modalState: {
         isOpen: false,
         content: '',
+    },
+    tasksState: {
+        isFetching: false,
+        tasks: []
     }
 }

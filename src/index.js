@@ -16,9 +16,6 @@ app.get('/getTask', (req, res) => {
 })
 
 app.get('/getAllTasks', (req, res) => {
-    console.log(TaskUtils.getTasks())
-    console.log(TaskUtils.getTasks().map(file => TaskUtils.getTaskData(file)));
-
     res.end(JSON.stringify(TaskUtils.getTasks().map(file => TaskUtils.getTaskData(file))))
 })
 

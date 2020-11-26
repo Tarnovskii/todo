@@ -1,6 +1,7 @@
 import {bindActionCreators} from "redux";
 import * as mainPageActions from '../actions/mainPageActions'
 import * as modalActions from '../actions/modalActions'
+import * as tasksActions from '../actions/tasksActions'
 
 
 export const mapDispatchToProps = () => dispatch => {
@@ -10,6 +11,9 @@ export const mapDispatchToProps = () => dispatch => {
         }, dispatch),
         modalActions: bindActionCreators({
             ...modalActions
+        }, dispatch),
+        tasksActions: bindActionCreators({
+            ...tasksActions
         }, dispatch)
     }
 }
